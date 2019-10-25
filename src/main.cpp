@@ -23,7 +23,7 @@ Mat RenderFrame(void)
 	scene.ParseOBJ("../../../data/cow.obj");
 
 #ifdef ENABLE_BSP
-	// Build BSPTree
+	// Build BSPTreev
 	scene.BuildAccelStructure();
 #endif
 	

@@ -4,6 +4,8 @@
 
 #include "Prim.h"
 
+using namespace std;
+
 /**
  * @brief The Plane Geaometrical Primitive class
  */
@@ -37,6 +39,8 @@ public:
 	{
 		CBoundingBox bounds;
 		// --- PUT YOUR CODE HERE ---
+        bounds.m_min = - 1 * numeric_limits<Vec3f>::infinity();
+        bounds.m_max = numeric_limits<Vec3f>::infinity();
 		return bounds;
 	}
 	

@@ -37,7 +37,7 @@ public:
 	/**
 	 * @brief Returns the normalized normal of the primitive
 	 * @param ray The ray
-	 * @return The normalized normal of the primitive
+	 * @return The normalized normal of the primitivev
 	 */
 	virtual Vec3f			GetNormal(const Ray& ray) const = 0;
 	/**
@@ -47,13 +47,15 @@ public:
 	virtual CBoundingBox	calcBounds(void) const = 0;
 	/**
 	 * @brief Check whether the primitive is contained in the bounding box \b box
-	 * @param box The bounding box
+	 * @param box The bounding boxv
 	 * @retval true If the primitive's bounding box overlaps the given bounding box \b box
 	 * @retval false Otherwise
 	 */
 	virtual bool 			inVoxel(const CBoundingBox& box) const
 	{
 		// --- PUT YOUR CODE HERE ---
+        CBoundingBox b = calcBounds();
+        return b.overlaps(box);
 		return true;
 	}
 	

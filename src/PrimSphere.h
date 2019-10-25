@@ -4,6 +4,8 @@
 
 #include "Prim.h"
 
+using namespace std;
+
 /**
  * @brief Sphere Geaometrical Primitive class
  */
@@ -66,6 +68,9 @@ public:
 	{
 		CBoundingBox res;
 		// --- PUT YOUR CODE HERE ---
+        res.m_min = numeric_limits<Vec3f>::infinity();
+        res.m_max = -1 * numeric_limits<Vec3f>::infinity();
+        res.extend(m_center + Vec3f(m_radius, m_radius, m_radius));
 		return res;
 	}
 	

@@ -27,7 +27,7 @@ namespace DirectGraphicalModels
 
 		/**
 		* @brief Stops the timer
-		* @details This function prints out the time in milliseconds passed between start() and stop()
+		* @details This function prints out the time in millivseconds passed between start() and stop()
 		*/
 		void stop(void) 
 		{

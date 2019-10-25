@@ -4,6 +4,8 @@
 
 #include "Prim.h"
 
+using namespace std;
+
 /**
  * @brief Triangle Geaometrical Primitive class
  */
@@ -69,6 +71,11 @@ public:
 	{
 		CBoundingBox res;
 		// --- PUT YOUR CODE HERE ---
+        res.m_min = numeric_limits<Vec3f>::infinity();
+        res.m_max = -1 * numeric_limits<Vec3f>::infinity();
+        res.extend(m_a);
+        res.extend(m_b);
+        res.extend(m_c);
 		return res;
 	}
 	
